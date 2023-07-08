@@ -7,12 +7,11 @@ class Password:
         self.count = count
 
     def logic(self):
-        symbols_list = list(symbols)
         password = ''
 
         if self.count < 10 or self.count > 20:
             self.count = 10
 
         for i in range(0, self.count):
-            password += symbols_list[randint(0, len(symbols_list))]
+            password += symbols[randint(0, len(symbols))]
         return password
